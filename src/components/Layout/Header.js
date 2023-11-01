@@ -43,7 +43,7 @@ const Header = () => {
                 alt="shopping0bag"
                 width={"30px"}
               />{" "}
-              ECOM HUB
+              GLAM MART
             </Link>
             <div className="ms-auto">
               <SearchInput />
