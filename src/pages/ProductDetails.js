@@ -53,7 +53,6 @@ const ProductDetails = () => {
   // lifecycle method
   useEffect(() => {
     if (params?.slug) getProducts();
-    //eslint-disable-next-line
   }, [params?.slug]);
 
   return (
