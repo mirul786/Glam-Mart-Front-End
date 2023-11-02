@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const getProducts = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
+        `https://backendecommerce-9ay8.onrender.com/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
       );
       if (data?.success) {
         setProducts(data?.product);
