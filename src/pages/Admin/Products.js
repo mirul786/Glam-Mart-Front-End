@@ -97,7 +97,6 @@ const Products = () => {
                   className="product-link"
                   onClick={() => {
                     navigate(`/dashboard/admin/products/${p.slug}/${p._id}`);
-                    window.location.reload();
                   }}
                 >
                   <div className="col">

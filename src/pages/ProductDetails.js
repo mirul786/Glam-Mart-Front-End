@@ -53,6 +53,7 @@ const ProductDetails = () => {
   // lifecycle method
   useEffect(() => {
     if (params?.slug) getProducts();
+    //eslint-disable-next-line
   }, [params?.slug]);
 
   return (
@@ -125,7 +126,6 @@ const ProductDetails = () => {
                     alt={p.name}
                     onClick={() => {
                       navigate(`/product-details/${p?.slug}/${p?._id}`);
-                      window.location.reload();
                     }}
                   />
                 </Link>
