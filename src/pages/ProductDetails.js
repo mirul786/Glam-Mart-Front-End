@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const getProducts = async () => {
     try {
       const { data } = await axios.get(
-        `https://backendecommerce-9ay8.onrender.com/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
+        `${process.env.REACT_APP_API}/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
       );
       if (data?.success) {
         setProducts(data?.product);
@@ -125,7 +125,7 @@ const ProductDetails = () => {
                     className="card-img-top"
                     alt={p.name}
                     onClick={() => {
-                      navigate(`/product-details/${p.slug}/${p._id}`);
+                      navigate(`/product-details/${p?.slug}/${p?._id}`);
                       window.location.reload();
                     }}
                   />
