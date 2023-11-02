@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const getProducts = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
+        `${process.env.REACT_APP_API}/api/v1/products/get-single-product/${params?.slug}/${params?._id}`
       );
       if (data?.success) {
         setProducts(data?.product);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
   const getSimilarProducts = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `/api/v1/products/similar-product/${pid}/${cid}`
+        `${process.env.REACT_APP_API}/api/v1/products/similar-product/${pid}/${cid}`
       );
       if (data?.success) {
         setSimilarProducts(data?.products);
@@ -62,7 +62,7 @@ const ProductDetails = () => {
         <div className="row">
           <div className="col-md-4">
             <img
-              src={`/api/v1/products/product-image/${products?._id}`}
+              src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${products?._id}`}
               className="card-img-top"
               alt={products?.name}
             />
@@ -121,7 +121,7 @@ const ProductDetails = () => {
               <div className="card h-100">
                 <Link>
                   <img
-                    src={`/api/v1/products/product-image/${p?._id}`}
+                    src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
                     className="card-img-top"
                     alt={p.name}
                     onClick={() => {
