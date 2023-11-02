@@ -186,7 +186,7 @@ const Home = () => {
                         className="card-img-top"
                         alt={p.name}
                         onClick={() => {
-                          navigate(`/api/v1/products/get-single-product/${p.slug}/${p?._id}`);
+                          navigate(`/product-details/${p.slug}/${p?._id}`);
                           window.location.reload();
                         }}
                       />
