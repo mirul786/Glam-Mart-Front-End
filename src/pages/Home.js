@@ -5,7 +5,6 @@ import { NotificationManager } from "react-notifications";
 import { Checkbox, Radio } from "antd";
 import Price from "./../components/Price";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -180,16 +179,14 @@ const Home = () => {
               {products?.map((p) => (
                 <div key={p._id} className="col">
                   <div className="card h-100">
-                    <Link>
-                      <img
-                        src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
-                        className="card-img-top"
-                        alt={p.name}
-                        onClick={() => {
-                          navigate(`/product-details/${p?.slug}/${p?._id}`);
-                        }}
-                      />
-                    </Link>
+                    <img
+                      src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
+                      className="card-img-top"
+                      alt={p.name}
+                      onClick={() => {
+                        navigate(`/product-details/${p?.slug}/${p?._id}`);
+                      }}
+                    />
                     <div className="card-body">
                       <p className="card-text">
                         {p.description.substring(0, 40)}...
