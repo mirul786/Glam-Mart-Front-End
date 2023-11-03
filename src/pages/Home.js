@@ -181,7 +181,7 @@ const Home = () => {
                   <div className="card h-100">
                     <img
                       src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
-                      className="card-img-top"
+                      className="card-img-top product-image"
                       alt={p.name}
                       onClick={() => {
                         navigate(`/product-details/${p?.slug}/${p?._id}`);

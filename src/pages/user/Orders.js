@@ -77,7 +77,7 @@ const Orders = () => {
                         <div className="col-md-8">
                           <p>{p.name}</p>
                           <p>{p.description.substring(0, 50)}...</p>
-                          <p>$ {p.price}</p>
+                          <p>₹{p.price}</p>
                         </div>
                       </div>
                     ))}

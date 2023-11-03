@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import { NotificationManager } from "react-notifications";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/cart";
 
@@ -119,16 +119,14 @@ const ProductDetails = () => {
           {similarProducts?.map((p) => (
             <div key={p._id} className="col">
               <div className="card h-100">
-                <Link>
-                  <img
-                    src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
-                    className="card-img-top"
-                    alt={p.name}
-                    onClick={() => {
-                      navigate(`/product-details/${p?.slug}/${p?._id}`);
-                    }}
-                  />
-                </Link>
+                <img
+                  src={`${process.env.REACT_APP_API}/api/v1/products/product-image/${p?._id}`}
+                  className="card-img-top product-image"
+                  alt={p.name}
+                  onClick={() => {
+                    navigate(`/product-details/${p?.slug}/${p?._id}`);
+                  }}
+                />
                 <div className="card-body">
                   <p className="card-text">
                     {p.description.substring(0, 40)}...

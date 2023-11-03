@@ -3,7 +3,6 @@ import Layout from "./../../components/Layout/Layout";
 import AdminMenu from "./../../components/Layout/AdminMenu";
 import axios from "axios";
 import { NotificationManager } from "react-notifications";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
@@ -92,9 +91,9 @@ const Products = () => {
           <div className="col-md-9">
             <div className="row row-cols-1 row-cols-md-4 g-4">
               {products?.map((p) => (
-                <Link
+                <div
                   key={p._id}
-                  className="product-link"
+                  className="product-link product-image"
                   onClick={() => {
                     navigate(`/dashboard/admin/products/${p.slug}/${p._id}`);
                   }}
@@ -122,7 +121,7 @@ const Products = () => {
                     </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
             <div className="m-3 p-3">

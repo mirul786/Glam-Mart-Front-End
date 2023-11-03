@@ -14,7 +14,7 @@ const Search = () => {
           <h6>
             {values?.results.length < 1
               ? "No Products Found"
-              : `Found ${values?.results.length}`}
+              : `Found ${values?.results.length} Product`}
           </h6>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {values?.results?.map((p) => (
@@ -26,19 +26,19 @@ const Search = () => {
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <p className="card-text"> $ {p.price}</p>
+                    <p className="card-text"> ₹ {p.price}</p>
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">
                       {p.description.substring(0, 100)}...
                     </p>
                   </div>
                   <div className="card-footer">
-                    <button className="btn btn-outline-primary ms-1" onClick={() => {
+                    <button className="btn btn-success ms-1" onClick={() => {
                       navigate(`/product-details/${p.slug}/${p._id}`)
                     }}>
                       MORE DETAILS
                     </button>
-                    <button className="btn btn-outline-danger ms-1">
+                    <button className="btn btn-warning ms-1">
                       ADD TO CARD
                     </button>
                   </div>
