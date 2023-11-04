@@ -56,6 +56,10 @@ const ProductDetails = () => {
     //eslint-disable-next-line
   }, [params?.slug]);
 
+  // scroll top
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
   return (
     <Layout title={"Product Details"}>
       <div className="container">
@@ -114,7 +118,12 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        {similarProducts?.length < 1 ? null : <h5>Similar Products</h5>}
+        {similarProducts?.length < 1 ? null : (
+          <>
+            <hr />
+            <h5>Similar Products</h5>
+          </>
+        )}
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {similarProducts?.map((p) => (
             <div key={p._id} className="col">
@@ -125,6 +134,7 @@ const ProductDetails = () => {
                   alt={p.name}
                   onClick={() => {
                     navigate(`/product-details/${p?.slug}/${p?._id}`);
+                    scrollToTop();
                   }}
                 />
                 <div className="card-body">

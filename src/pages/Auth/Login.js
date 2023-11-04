@@ -43,7 +43,7 @@ const Login = () => {
   }
 
   return (
-    <Layout title={"Login-Ecom Hub"}>
+    <Layout title={"Login-glam mart"}>
       <div className="form-container">
         <form className="form-register" onSubmit={handleSubmit}>
           <h1>LOGIN</h1>

@@ -135,8 +135,13 @@ const Home = () => {
     //eslint-disable-next-line
   }, [page]);
 
+  // scroll top 
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
-    <Layout title={"Ecom Hub - Best Offers"}>
+    <Layout title={"glam mart - Glam Offers"}>
       <div className="fluid-container">
         <div className="row m-2">
           <div className="col-md-2">
@@ -185,6 +190,7 @@ const Home = () => {
                       alt={p.name}
                       onClick={() => {
                         navigate(`/product-details/${p?.slug}/${p?._id}`);
+                        scrollToTop()
                       }}
                     />
                     <div className="card-body">

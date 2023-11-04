@@ -26,7 +26,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: "Ecom Hub - Shop Now",
+  title: "glam mart - Shop Now",
   description: "mern stack shopping application",
   keywords: "mern, react, bootstrap, node, mongodb, vscode, jsx, js, express,",
   author: "Mirul Ansari",

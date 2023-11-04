@@ -42,7 +42,7 @@ const Header = () => {
                 alt="shopping0bag"
                 width={"30px"}
               />{" "}
-              GLAM MART
+              glam mart
             </Link>
             <div className="ms-auto">
               <SearchInput />

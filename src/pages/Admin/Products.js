@@ -80,6 +80,12 @@ const Products = () => {
     loadMore();
     //eslint-disable-next-line
   }, [page]);
+
+  // scroll top 
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <Layout title={"All-Products"}>
       <div className="container-fluid">
@@ -96,6 +102,7 @@ const Products = () => {
                   className="product-link product-image"
                   onClick={() => {
                     navigate(`/dashboard/admin/products/${p.slug}/${p._id}`);
+                    scrollToTop()
                   }}
                 >
                   <div className="col">

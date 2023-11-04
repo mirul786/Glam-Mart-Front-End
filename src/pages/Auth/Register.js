@@ -39,7 +39,7 @@ const Register = () => {
   }
 
   return (
-    <Layout title={"Register-Ecom Hub"}>
+    <Layout title={"Register-glam mart"}>
       <div className="form-container">
         <form className="form-register" onSubmit={handleSubmit}>
           <h1>REGISTER</h1>

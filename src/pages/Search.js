@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 const Search = () => {
   const navigate = useNavigate()
   const [values] = useSearch();
+
+  // scroll top 
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+  
   return (
     <Layout title={"Search Results"}>
       <div className="container">
@@ -35,6 +41,7 @@ const Search = () => {
                   <div className="card-footer">
                     <button className="btn btn-success ms-1" onClick={() => {
                       navigate(`/product-details/${p.slug}/${p._id}`)
+                      scrollToTop()
                     }}>
                       MORE DETAILS
                     </button>
